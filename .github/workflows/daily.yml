@@ -1,4 +1,4 @@
-name: Check for Goiko Menu
+name: Daily - Goiko Menu
 
 on:
   workflow_dispatch:
