@@ -1,4 +1,4 @@
-name: Check for Goiko Menu
+name: Weekly - Goiko Menu
 
 on:
   schedule:
