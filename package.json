@@ -1,0 +1,26 @@
+{
+  "name": "goiko-menu",
+  "version": "1.0.0",
+  "description": "Weekly Goiko Meny",
+  "main": "index.js",
+  "scripts": {
+    "daily": "node index.js daily",
+    "weekly": "node index.js weekly",
+    "monthly": "node index.js monthly",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itaibo/goiko-menu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itaibo/goiko-menu/issues"
+  },
+  "homepage": "https://github.com/itaibo/goiko-menu#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0"
+  }
+}
