@@ -1,1 +1,1 @@
-Weekly Goiko Meny
+Weekly Goiko Menu
