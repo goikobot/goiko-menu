@@ -3,6 +3,7 @@ name: Check for Goiko Menu
 on:
   schedule:
   - cron: '30 5 * * 1'
+  workflow_dispatch:
 
 jobs:
   scheduled:
