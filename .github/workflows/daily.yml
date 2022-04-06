@@ -1,8 +1,6 @@
 name: Check for Goiko Menu
 
 on:
-  schedule:
-  - cron: '30 5 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -32,4 +30,4 @@ jobs:
         echo TELEGRAM_SEND_MESSAGE=${{ secrets.TELEGRAM_SEND_MESSAGE }} >> .env
     
     - name: Execute cron
-      run: npm run weekly
+      run: npm run daily
