@@ -1,6 +1,7 @@
 const config = require('./src/config');
 const goiko = require('./src/services/goiko');
 const telegram = require('./src/services/telegram');
+const twitter = require('./src/services/twitter');
 
 async function cli() {
 	// Get period
@@ -29,11 +30,11 @@ async function cli() {
 	let content = '';
 	if (period === 'daily') {
 		const today = menuByDay[0];
-		content = `La hamburguesa del ${today.day.toLowerCase()} es ${today.burger}`;
+		content = `La hamburguesa del ${today.day.toLowerCase()} en #Goiko es ${today.burger}`;
 	}
 
 	if (period === 'weekly') {
-		content += 'Las hamburguesas de la semana:';
+		content += 'Las hamburguesas de la semana en #Goiko:';
 
 		menuByDay.forEach(weekday => {
 			content += `\r\n- ${weekday.day}: ${weekday.burger}`;
@@ -52,9 +53,20 @@ async function cli() {
 		if (!sentMessage) {
 			console.log('Telegram message sent');
 		} else {
-			console.error('Telegram message could not be sent');
+			console.error('Could not send Telegram message');
 		}
 	}
+
+	// Send tweet
+	if (config.twitter.sendTweet) {
+		const sentTweet = await twitter.tweet(content);
+		if (sentTweet) {
+			console.log('Tweeted successfully');
+		} else {
+			console.error('Could not tweet');
+		}
+	}
+
 }
 
 module.exports = cli();
