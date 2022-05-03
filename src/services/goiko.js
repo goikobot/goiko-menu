@@ -71,7 +71,7 @@ function parseMenu(menu) {
 	if (!menu) return null;
 
 	// Get main block
-	const siempreMenu = _getStringsBetweenTwoStrings(menu, '<div class="daily-swiper1"', '<div class="daily-swiper2"');
+	const siempreMenu = _getStringsBetweenTwoStrings(menu, '<div class="daily-swiper1"', '<div class="whatsapp-footer">');
 
 	// Get all regex burger names
 	const burgerNamesMatches = siempreMenu.matchAll(/>Hamburguesa (.*?)<\/a>/g);
