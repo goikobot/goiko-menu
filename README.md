@@ -1,1 +1,1 @@
-Weekly Goiko Menu
+Weekly Goiko Menu on Twitter and Telegram
